@@ -13,6 +13,8 @@ kotlin {
         binaries {
             framework {
                 baseName = "shared"
+                isStatic = false
+                transitiveExport = true
             }
         }
     }
@@ -36,13 +38,6 @@ kotlin {
         }
         val iosMain by getting
         val iosTest by getting
-    }
-
-    targets.withType<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget> {
-        binaries.withType<org.jetbrains.kotlin.gradle.plugin.mpp.Framework> {
-            isStatic = false
-            transitiveExport = true
-        }
     }
 
     multiplatformSwiftPackage {
