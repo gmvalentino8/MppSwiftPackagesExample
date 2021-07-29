@@ -38,7 +38,7 @@ kotlin {
         }
         val iosMain by getting
         val iosTest by getting
-
+    }
 
     multiplatformSwiftPackage {
         swiftToolsVersion("5.3")
